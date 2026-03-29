@@ -1,0 +1,62 @@
+<config>
+	<append xpath="/windows">
+		<window name="serverinfowindow" anchor="CenterTop" pos="-420,-90" width="840" height="620" cursor_area="true">
+			<panel name="header" pos="0,0" height="43" depth="1" disableautobackground="true">
+				<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="840" height="43" color="[black]" type="sliced" fillcenter="true" globalopacity="true"/>
+				<label style="header.name" pos="6,-6" width="830" text_key="wrcUiHigashiInfoTitle"/>
+			</panel>
+			<panel name="content" pos="0,-46" height="570" depth="1" pivot="center" disableautobackground="true">
+				<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" width="840" height="570" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9"/>
+				<sprite depth="1" name="background" sprite="menu_empty3px" pos="2,-2" width="836" height="566" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" globalopacitymod="0.65"/>
+				<rect name="tabs" controller="TabSelector" pos="10,-10" width="820" height="550" select_tab_contents_on_open="true" use_page_buttons="true">
+					<rect name="tabsHeader" height="48" depth="0">
+						<boxbg backcolor="[mediumGrey]"/>
+						<rect pos="0,-24">
+							<rect controller="TabSelectorButton" pos="30,0">
+								<button depth="2" pos="0,0" style="icon30px, press" sprite="{tab_sprite}" pivot="center" tooltip="{tab_name_localized}" sound="[paging_click]" selected="{tab_selected}"/>
+							</rect>
+							<rect controller="TabSelectorButton" pos="80,0">
+								<button depth="2" pos="0,0" style="icon30px, press" sprite="{tab_sprite}" pivot="center" tooltip="{tab_name_localized}" sound="[paging_click]" selected="{tab_selected}"/>
+							</rect>
+							<rect controller="TabSelectorButton" pos="130,0">
+								<button depth="2" pos="0,0" style="icon30px, press" sprite="{tab_sprite}" pivot="center" tooltip="{tab_name_localized}" sound="[paging_click]" selected="{tab_selected}"/>
+							</rect>
+						</rect>
+					</rect>
+					<rect name="tabsContents" depth="8" pos="0,-48" width="820" height="502">
+						<!-- Page 1: Status (text only / cvar なし) -->
+						<rect controller="TabSelectorTab" tab_key="status" tab_caption_key="lblStats" tab_sprite="ui_game_symbol_ping">
+							<label pos="20,-16" depth="3" width="780" height="40" font_size="30" justify="left" color="[white]" text_key="wrcUiHigashiStatusHeader"/>
+							<label pos="20,-52" depth="3" width="780" height="28" font_size="20" justify="left" color="[lightGrey]" text_key="wrcUiHigashiPage1"/>
+							<rect pos="20,-90" width="780" height="400">
+								<sprite depth="2" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="780" height="400"/>
+								<sprite depth="1" color="[black]" type="sliced" width="780" height="400" globalopacity="true" globalopacitymod="0.25"/>
+								<label pos="18,-18" depth="3" width="744" height="362" justify="left" font_size="24" color="[white]" text_key="wrcUiHigashiStatusBody"/>
+							</rect>
+						</rect>
+						<!-- Page 2: Guide -->
+						<rect controller="TabSelectorTab" tab_key="guide" tab_caption_key="lblDescription" tab_sprite="ui_game_symbol_book">
+							<label pos="20,-16" depth="3" width="780" height="40" font_size="30" justify="left" color="[white]" text_key="wrcUiHigashiGuideHeader"/>
+							<label pos="20,-52" depth="3" width="780" height="28" font_size="20" justify="left" color="[lightGrey]" text_key="wrcUiHigashiPage2"/>
+							<rect pos="20,-90" width="780" height="400">
+								<sprite depth="2" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="780" height="400"/>
+								<sprite depth="1" color="[black]" type="sliced" width="780" height="400" globalopacity="true" globalopacitymod="0.25"/>
+								<label pos="18,-18" depth="3" width="744" height="362" justify="left" font_size="24" color="[white]" text_key="wrcUiHigashiGuideBody"/>
+							</rect>
+						</rect>
+						<!-- Page 3: Notes / Commands -->
+						<rect controller="TabSelectorTab" tab_key="ops" tab_caption_key="xuiQuests" tab_sprite="ui_game_symbol_quest">
+							<label pos="20,-16" depth="3" width="780" height="40" font_size="30" justify="left" color="[white]" text_key="wrcUiHigashiOpsHeader"/>
+							<label pos="20,-52" depth="3" width="780" height="28" font_size="20" justify="left" color="[lightGrey]" text_key="wrcUiHigashiPage3"/>
+							<rect pos="20,-90" width="780" height="400">
+								<sprite depth="2" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="780" height="400"/>
+								<sprite depth="1" color="[black]" type="sliced" width="780" height="400" globalopacity="true" globalopacitymod="0.25"/>
+								<label pos="18,-18" depth="3" width="744" height="362" justify="left" font_size="24" color="[white]" text_key="wrcUiHigashiOpsBody"/>
+							</rect>
+						</rect>
+					</rect>
+				</rect>
+			</panel>
+		</window>
+	</append>
+</config>

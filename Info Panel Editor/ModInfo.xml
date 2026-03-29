@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="infoPanelEditer"/>
+    <DisplayName value="Info Panel Editer"/>
+    <Description value="Discord bot for generating 7 Days to Die XUi XML and returning downloadable files in Discord."/>
+    <Author value="7DAYSTODIE.JP"/>
+    <Version value="0.1.0"/>
+	<Website value="https://steamcommunity.com/groups/7DTD_JP"/>
+</xml>
